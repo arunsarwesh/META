@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block start %}
+<h2>HOME</h2>
+    <div class="container">
+        <span>{% if user.is_authenticated %}
+        <h2 id="user">Welcome! {{ user.username }}</h2>
+        <br><br>
+        <a id="out" href="/acc/logout">Logout?</a></span>
+        {% else %}
+        <h2> Sorry,first <br><br>
+        <a href="/acc/login">Login!</a>
+        {% endif %}
+    </div>
+    
+{% endblock %}
